@@ -1,0 +1,23 @@
+SET(SOURCES ui_comp_panel1.c
+    ui_comp.c
+    ui_Screen1.c
+    ui_Screen2.c
+    ui_Screen3.c
+    ui_Screen4.c
+    ui_Screen5.c
+    ui_Screen6.c
+    ui_Screen7.c
+    ui.c
+    ui_comp_hook.c
+    ui_helpers.c
+    ui_events.c
+    ui_img_logo_usc_11zon_png.c
+    ui_img_triangulo_11zon_11zon_png.c
+    ui_img_balancin_11zon_11zon_png.c
+    ui_img_pid_11zon_png.c
+    ui_img_realtime_11zon_png.c
+    ui_img_herramientas_11zon_png.c
+    ui_img_lista_11zon_png.c
+    ui_img_engra_png.c)
+
+add_library(ui ${SOURCES})
