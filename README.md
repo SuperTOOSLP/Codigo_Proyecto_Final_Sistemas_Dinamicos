@@ -6,6 +6,6 @@ Sistemas Dinámicos
 
 Integrantes del Proyecto
 
-Luis José Pinto González
-Juan Manuel González Banguero
-Andrés David Nazarith Gómez
+Luis José Pinto González\n
+Juan Manuel González Banguero\n
+Andrés David Nazarith Gómez\n
