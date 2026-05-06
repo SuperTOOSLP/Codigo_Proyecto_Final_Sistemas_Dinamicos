@@ -27,6 +27,7 @@ extern volatile bool enviar_kp;
 extern volatile bool enviar_ki;
 extern volatile bool enviar_kd;
 extern volatile bool enviar_set_point;
+extern volatile bool sistema_activo;
 
 extern volatile bool encender_motor_izquierdo;
 extern volatile bool encender_motor_derecho;
@@ -181,6 +182,10 @@ void loop()
     Serial.printf("Kp:%.2f\n", Kp);
     enviar_kp = false;
   }
+  if(sistema_activo){
+    Serial.println("SC:1");
+    sistema_activo = false;
+  }
   if(enviar_ki){
     Serial.printf("Ki:%.2f\n", Ki);
     enviar_ki = false;
@@ -197,8 +202,10 @@ void loop()
 
 if(encender_motor_izquierdo != estado_anterior_MI){
     if(encender_motor_izquierdo){
+        Serial.println("SC:0");
         Serial.println("MI:1");
     } else {
+        Serial.println("SC:0");
         Serial.println("MI:0");
     }
     estado_anterior_MI = encender_motor_izquierdo;
@@ -206,8 +213,10 @@ if(encender_motor_izquierdo != estado_anterior_MI){
 
 if(encender_motor_derecho != estado_anterior_MD){
     if(encender_motor_derecho){
+        Serial.println("SC:0");
         Serial.println("MD:1");
     } else {
+        Serial.println("SC:0");
         Serial.println("MD:0");
     }
     estado_anterior_MD = encender_motor_derecho;
