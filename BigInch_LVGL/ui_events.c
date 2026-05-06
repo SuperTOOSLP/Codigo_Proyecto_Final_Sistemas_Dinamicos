@@ -1,13 +1,14 @@
 #include "ui.h"
 
-volatile float Kp = 60.0; 
-volatile float Ki = 10.0;
-volatile float Kd = 90.0;
+volatile float Kp = 20.0; 
+volatile float Ki = 16.0;
+volatile float Kd = 6.0;
 
 volatile bool enviar_kp = false;
 volatile bool enviar_ki = false;
 volatile bool enviar_kd = false;
 volatile bool enviar_set_point = false;
+volatile bool sistema_activo = false;
 
 volatile bool encender_motor_izquierdo = false;
 volatile bool encender_motor_derecho = false;
@@ -52,18 +53,19 @@ void enviarSetPoint(lv_event_t * e)
 void resetearconstantes(lv_event_t * e)
 {
     // Kp
-    lv_slider_set_value(ui_SliderProporcional, 60, LV_ANIM_OFF);
-    Kp = 60 * 0.05f;
+    sistema_activo = true;
+    lv_slider_set_value(ui_SliderProporcional, 20, LV_ANIM_OFF);
+    Kp = 20 * 0.05f;
     set_label_float(ui_LabelProporcional, Kp);
 
     // Ki
-    lv_slider_set_value(ui_SliderIntegral, 10, LV_ANIM_OFF);
-    Ki = 10 * 0.05f;
+    lv_slider_set_value(ui_SliderIntegral, 16, LV_ANIM_OFF);
+    Ki = 16 * 0.05f;
     set_label_float(ui_LabelIntegral, Ki);
 
     // Kd
-    lv_slider_set_value(ui_SliderDerivativo, 90, LV_ANIM_OFF);
-    Kd = 90 * 0.05f;
+    lv_slider_set_value(ui_SliderDerivativo, 6, LV_ANIM_OFF);
+    Kd = 6 * 0.05f;
     set_label_float(ui_LabelDerivativo, Kd);
 
     enviar_kp = true;
