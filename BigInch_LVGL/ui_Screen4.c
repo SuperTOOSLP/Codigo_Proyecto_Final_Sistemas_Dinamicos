@@ -39,7 +39,7 @@ void ui_Screen4_screen_init(void)
     lv_obj_set_style_text_font(ui_Label9, &lv_font_montserrat_48, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_SliderProporcional = lv_slider_create(ui_Screen4);
-    lv_slider_set_value(ui_SliderProporcional, 60, LV_ANIM_OFF);
+    lv_slider_set_value(ui_SliderProporcional, 20, LV_ANIM_OFF);
     if(lv_slider_get_mode(ui_SliderProporcional) == LV_SLIDER_MODE_RANGE) lv_slider_set_left_value(ui_SliderProporcional, 0,
                                                                                                        LV_ANIM_OFF);
     lv_obj_set_width(ui_SliderProporcional, 505);
@@ -62,7 +62,7 @@ void ui_Screen4_screen_init(void)
     lv_obj_set_style_bg_opa(ui_SliderProporcional, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
 
     ui_SliderIntegral = lv_slider_create(ui_Screen4);
-    lv_slider_set_value(ui_SliderIntegral, 10, LV_ANIM_OFF);
+    lv_slider_set_value(ui_SliderIntegral, 16, LV_ANIM_OFF);
     if(lv_slider_get_mode(ui_SliderIntegral) == LV_SLIDER_MODE_RANGE) lv_slider_set_left_value(ui_SliderIntegral, 0,
                                                                                                    LV_ANIM_OFF);
     lv_obj_set_width(ui_SliderIntegral, 505);
@@ -85,7 +85,7 @@ void ui_Screen4_screen_init(void)
     lv_obj_set_style_bg_opa(ui_SliderIntegral, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
 
     ui_SliderDerivativo = lv_slider_create(ui_Screen4);
-    lv_slider_set_value(ui_SliderDerivativo, 90, LV_ANIM_OFF);
+    lv_slider_set_value(ui_SliderDerivativo, 6, LV_ANIM_OFF);
     if(lv_slider_get_mode(ui_SliderDerivativo) == LV_SLIDER_MODE_RANGE) lv_slider_set_left_value(ui_SliderDerivativo, 0,
                                                                                                      LV_ANIM_OFF);
     lv_obj_set_width(ui_SliderDerivativo, 505);
@@ -179,7 +179,7 @@ void ui_Screen4_screen_init(void)
     lv_obj_set_x(ui_LabelProporcional, 341);
     lv_obj_set_y(ui_LabelProporcional, -53);
     lv_obj_set_align(ui_LabelProporcional, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LabelProporcional, "3.0");
+    lv_label_set_text(ui_LabelProporcional, "1.0");
     lv_obj_set_style_text_font(ui_LabelProporcional, &lv_font_montserrat_44, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_LabelIntegral = lv_label_create(ui_Screen4);
@@ -188,7 +188,7 @@ void ui_Screen4_screen_init(void)
     lv_obj_set_x(ui_LabelIntegral, 341);
     lv_obj_set_y(ui_LabelIntegral, 62);
     lv_obj_set_align(ui_LabelIntegral, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LabelIntegral, "0.5");
+    lv_label_set_text(ui_LabelIntegral, "0.8");
     lv_obj_set_style_text_font(ui_LabelIntegral, &lv_font_montserrat_44, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_LabelDerivativo = lv_label_create(ui_Screen4);
@@ -197,7 +197,7 @@ void ui_Screen4_screen_init(void)
     lv_obj_set_x(ui_LabelDerivativo, 341);
     lv_obj_set_y(ui_LabelDerivativo, 172);
     lv_obj_set_align(ui_LabelDerivativo, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LabelDerivativo, "4.5");
+    lv_label_set_text(ui_LabelDerivativo, "0.3");
     lv_obj_set_style_text_font(ui_LabelDerivativo, &lv_font_montserrat_44, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Label18 = lv_label_create(ui_Screen4);
